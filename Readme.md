@@ -4,7 +4,7 @@ PopWord
 
 # 效果视图
 
-![效果视图](/image.png)
+![效果视图](/screenshot.png)
 
 # 功能描述
 
