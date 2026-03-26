@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Word Reminder Settings</title>
+</head>
+
+<body>
+    <h2>弹词开关</h2>
+    <label>
+        <input type="checkbox" id="enablePopup" checked>
+        启用弹词
+    </label>
+
+    <h2>上传你的 .CSV 词库</h2>
+    <input type="file" id="csvFile" accept=".csv" />
+    <button id="uploadBtn">上传 CSV</button>
+    <p id="status" style="color:green;"></p>
+
+    <h2>卡片设置</h2>
+    <label for="positionSelect">卡片出现位置:</label>
+    <select id="positionSelect">
+        <option value="top-left">左上角</option>
+        <option value="top-center" selected>上中</option>
+        <option value="top-right">右上角</option>
+        <option value="middle-left">左中</option>
+        <option value="center">中间</option>
+        <option value="middle-right">右中</option>
+        <option value="bottom-left">左下角</option>
+        <option value="bottom-center">下中</option>
+        <option value="bottom-right">右下角</option>
+    </select>
+
+    <h2>时间设置</h2>
+    <label for="displayDuration">卡片显示时长 (秒):</label>
+    <input type="number" id="displayDuration" min="3" value="8"><br>
+
+    <label for="intervalMinutes">两次弹词间隔 (分钟):</label>
+    <input type="number" id="intervalMinutes" min="0.1" value="0.25"><br>
+
+    <h2>发音设置</h2>
+    <label>
+        <input type="checkbox" id="enablePronounce" checked>
+        点击卡片播放发音（默认开启）
+    </label><br>
+    <label>
+        <input type="checkbox" id="autoPronounce" checked>
+        单词自动发音
+    </label>
+
+    <h2>收藏单词</h2>
+    <ul id="favoritesList"></ul>
+
+    <button id="saveBtn">保存设置</button>
+    <p id="statusSave" style="color:green;"></p>
+
+    <script src="papaparse.min.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>
