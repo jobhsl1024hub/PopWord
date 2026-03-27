@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "PopWord",
-  "version": "1.0",
+  "version": "1.0.0",
+  "author": "Shaolun Huang",
   "description": "在网页上弹出单词卡片/ Pop up vocabulary ",
   "permissions": ["storage", "alarms", "tabs"],
   "background": {
@@ -11,7 +12,14 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"]
+      "js": ["components/Card/card.js", "content.js"],
+      "css": ["components/Card/card.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["components/Card/card.html"],
+      "matches": ["<all_urls>"]
     }
   ]
 }

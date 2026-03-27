@@ -4,7 +4,11 @@ PopWord
 
 # 效果视图
 
+V1.0.0
 ![效果视图](/screenshot.png)
+
+V1.0.1
+![效果视图](/screenshot1.png.png)
 
 # 功能描述
 

@@ -1,0 +1,105 @@
+/* From Uiverse.io by gharsh11032000 */
+.card {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 320px;
+    min-width: 80px;
+    padding: 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 1.6;
+    z-index: 9997;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 12px;
+    border-radius: 12px;
+    color: #ffffff;
+    overflow: auto;
+    background: #ffffff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .head-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content .word {
+    /* color: #ffffff; */
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .phonetic {
+    margin-left: 8px;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.content .meaning {
+    opacity: 0.8;
+    font-size: 16px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 250%;
+    width: 250%;
+    border-radius: inherit;
+    background: linear-gradient(to right, #062f3e, #032632);
+    transform-origin: center;
+    animation: moving 4.8s linear infinite paused;
+    transition: all 0.88s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover::before {
+    animation-play-state: running;
+    z-index: -1;
+    width: 20%;
+}
+
+.card:not(:hover)::before {
+    width: 250%;
+}
+
+.card:hover .content .head-group,
+.card:hover .content .meaning {
+    color: #000000;
+}
+
+.card:hover {
+    box-shadow: 0rem 6px 13px rgba(3, 37, 48, 0.1),
+        0rem 24px 24px rgba(3, 37, 48, 0.09),
+        0rem 55px 33px rgba(3, 37, 48, 0.05),
+        0rem 97px 39px rgba(3, 37, 48, 0.1),
+        0rem 152px 43px rgba(3, 37, 48, 0);
+    scale: 1.15;
+    color: #000000;
+}
+
+@keyframes moving {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
